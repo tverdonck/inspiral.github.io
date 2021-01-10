@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Embedded Linux on inspiral | Tom Verdonck</title>
+    <link>http://inspiral.be/categories/embedded-linux/</link>
+    <description>Recent content in Embedded Linux on inspiral | Tom Verdonck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2021 [Inspiral](http://www.inspiral.be) All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 04 Aug 2020 09:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://inspiral.be/categories/embedded-linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Raspberry Pi image using the Yocto Project</title>
+      <link>http://inspiral.be/blog/blog-post-2/</link>
+      <pubDate>Tue, 04 Aug 2020 09:00:00 +0200</pubDate>
+      
+      <guid>http://inspiral.be/blog/blog-post-2/</guid>
+      <description>The Raspberry Pi is low-cost single board computer(SBC) created by the Raspberry Pi Foundation in 2012. This SBC was initialy created for educational purposes and by the end of 2019 over 30M pieces were sold.</description>
+    </item>
+    
+  </channel>
+</rss>

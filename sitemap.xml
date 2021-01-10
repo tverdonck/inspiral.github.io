@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://inspiral.be/categories/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/blog/blog-post-1/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/blog/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/tags/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/tags/ubuntu/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/categories/virtualization/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/tags/vmware/</loc>
+    <lastmod>2020-08-08T09:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/categories/embedded-linux/</loc>
+    <lastmod>2020-08-04T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/tags/raspberry-pi/</loc>
+    <lastmod>2020-08-04T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/blog/blog-post-2/</loc>
+    <lastmod>2020-08-04T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/tags/yocto-project/</loc>
+    <lastmod>2020-08-04T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/author/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/project/project-1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/project/project-2/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/project/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/service/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/project/project-3/</loc>
+  </url>
+  
+  <url>
+    <loc>http://inspiral.be/author/tom-verdonck/</loc>
+  </url>
+  
+</urlset>

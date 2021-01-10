@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Raspberry Pi image using the Yocto Project</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Tom Verdonck">
+  <meta name="generator" content="Hugo 0.71.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="http://inspiral.be/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="http://inspiral.be/plugins/Ionicons/css/ionicons.min.css">
+  
+  <link rel="stylesheet" href="http://inspiral.be/plugins/magnific-popup/magnific-popup.css">
+  
+  <link rel="stylesheet" href="http://inspiral.be/plugins/slick/slick.css">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="http://inspiral.be/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="http://inspiral.be/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="http://inspiral.be/images/favicon.png" type="image/x-icon">
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+
+<header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <nav class="navbar">
+          
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+              <img src="http://inspiral.be/images/logo.png" alt="inspiral | Tom Verdonck" class="img-responsive">
+            </a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://inspiral.be">Home</a></li>
+
+              
+              
+              <li><a href="http://inspiral.be/about">About</a></li>
+              
+              
+              
+              <li><a href="http://inspiral.be/project">Project</a></li>
+              
+              
+              
+              <li><a href="http://inspiral.be/service">Service</a></li>
+              
+              
+              
+              <li><a href="http://inspiral.be/blog">Blog</a></li>
+              
+              
+              
+              <li><a href="http://inspiral.be/contact">Contact</a></li>
+              
+              
+
+              
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="page-title bg-2" style="background-image: url('http://inspiral.be/images/company/about.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>Raspberry Pi image using the Yocto Project</h1>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="post post-single">
+					<h2 class="post-title">Raspberry Pi image using the Yocto Project</h2>
+					<div class="post-meta">
+						<ul>
+              <li><i class="ion-calendar"></i> August 4, 2020</li>
+              <li><i class="ion-android-people"></i>
+                Posted By
+                
+                <a class="text-primary" href="/author/tom-verdonck">Tom Verdonck</a>
+                
+              </li>
+              <li><i class="ion-pricetags"></i> 
+                
+                <a href="/tags/raspberry%20pi">Raspberry pi</a>
+								
+                , <a href="/tags/yocto%20project">Yocto project</a>
+								
+              </li>
+            </ul>
+					</div>
+					<div class="post-thumb">
+						<img class="img-responsive" src="/images/blog/blog-post-2.png" alt="Raspberry Pi image using the Yocto Project">
+					</div>
+					<div class="post-content post-excerpt">
+						<p>The <a href="https://www.raspberrypi.org/">Raspberry Pi</a>  is low-cost single board computer(SBC) created by the Raspberry Pi Foundation in 2012. 
+This SBC was initialy created for educational purposes and by the end of 2019 over 30M pieces were sold. At this moment 5 different models exits: Raspberry Pi Zero, Raspberry Pi, Raspberry Pi 2, Raspberry Pi 3 and Raspberry Pi 4.</p>
+<p>The <a href="https://www.yoctoproject.org/">Yocto Project</a>  is a open source project that simplifies the daunting task of creating a custom embedded Linux. 
+The Yocto Project provides tools and a complete set of configuration files for easing this process.</p>
+<blockquote>
+<p>This tutorial will focus on building a linux image for the Raspberry Pi using the Yocto Project</p>
+</blockquote>
+<h2 id="1-required">1. Required</h2>
+<ul>
+<li>Linux PC running Ubuntu 20.04 or <a href="/blog/blog-post-1/">Windows PC running Ubuntu 20.04 Virtual Machine</a>.
+At least <em><strong>35GB of free space</strong></em> should be available for building a basic image.</li>
+<li>Raspberry Pi</li>
+<li>microSD card</li>
+</ul>
+<h2 id="2-dependencies">2. Dependencies</h2>
+<p>The Yocto Project requires some dependencies before the build can be started on Ubuntu 20.04</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install git-core build-essential gawk chrpath texinfo diffstat python3 python3-distutils
+</code></pre></div><h2 id="3-clone-repositories">3. Clone repositories</h2>
+<p>Let&rsquo;s start with cloning the poky and meta-raspberrypi repositories. Zeus is the name of the latest version.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir yocto
+cd yocto
+git clone -b zeus git://git.yoctoproject.org/poky.git
+cd poky
+git clone -b zeus git://git.yoctoproject.org/meta-raspberrypi
+</code></pre></div><h2 id="4-init-the-build">4. Init the build</h2>
+<p>Create the build directory and initialize the build.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">. oe-init-build-env build
+</code></pre></div><h2 id="5-change-the-build-configuration">5. Change the build configuration</h2>
+<p>Edit conf/local.conf from the build directory and add the following. <a href="https://meta-raspberrypi.readthedocs.io/en/latest/">Read the following for more information.</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">BB_NUMBER_THREADS <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;4&#34;</span>
+PARALLEL_MAKE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;-j 4&#34;</span>
+MACHINE ?<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;raspberrypi0-wifi&#34;</span> <span style="color:#75715e"># for Raspberry Pi Zero build</span>
+GPU_MEM <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;16&#34;</span>
+</code></pre></div><p>Edit conf/bblayers.conf from the build directory and add the meta-raspberrypi layer.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">BBLAYERS ?<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; \
+</span><span style="color:#e6db74">  /home/user/yocto/poky/meta \
+</span><span style="color:#e6db74">  /home/user/yocto/poky/meta-yocto \
+</span><span style="color:#e6db74">  /home/user/yocto/poky/meta-yocto-bsp \
+</span><span style="color:#e6db74">  /home/user/yocto/poky/meta-raspberrypi
+</span><span style="color:#e6db74"> &#34;</span>
+</code></pre></div><h2 id="6-build">6. Build</h2>
+<p>We are now ready to start the build.
+Without modification the meta-raspberryi layer allows us to build two images: core-image-minimal and and core-image-base. The build time depends on your build machine and internet connection.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bitbake core-image-minimal
+</code></pre></div><h2 id="7-flash">7. Flash</h2>
+<p>The build output can be located at:
+<em><strong>/home/user/yocto/poky/build/tmp/deploy/images/raspberrypi0-wifi</strong></em></p>
+<p>The image to install on the sdcard:
+<em><strong>core-image-minimal-raspberrypi0-wifi.rpi-sdimg</strong></em></p>
+<p>Insert sdcard and determine name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">user@ubuntu:~$ dmesg
+<span style="color:#f92672">[</span> 2724.054584<span style="color:#f92672">]</span> usb 1-1: new high-speed USB device number <span style="color:#ae81ff">2</span> using ehci-pci
+<span style="color:#f92672">[</span> 2724.310705<span style="color:#f92672">]</span> usb 1-1: New USB device found, idVendor<span style="color:#f92672">=</span>05e3, idProduct<span style="color:#f92672">=</span>0716, bcdDevice<span style="color:#f92672">=</span>97.44
+<span style="color:#f92672">[</span> 2724.310708<span style="color:#f92672">]</span> usb 1-1: New USB device strings: Mfr<span style="color:#f92672">=</span>0, Product<span style="color:#f92672">=</span>1, SerialNumber<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
+<span style="color:#f92672">[</span> 2724.310716<span style="color:#f92672">]</span> usb 1-1: Product: USB Storage
+<span style="color:#f92672">[</span> 2724.310717<span style="color:#f92672">]</span> usb 1-1: SerialNumber: <span style="color:#ae81ff">000000009744</span>
+<span style="color:#f92672">[</span> 2724.400226<span style="color:#f92672">]</span> usb-storage 1-1:1.0: USB Mass Storage device detected
+<span style="color:#f92672">[</span> 2724.402598<span style="color:#f92672">]</span> scsi host33: usb-storage 1-1:1.0
+<span style="color:#f92672">[</span> 2725.598411<span style="color:#f92672">]</span> sd 33:0:0:2: <span style="color:#f92672">[</span>sdd<span style="color:#f92672">]</span> <span style="color:#ae81ff">31116288</span> 512-byte logical blocks: <span style="color:#f92672">(</span>15.9 GB/14.8 GiB<span style="color:#f92672">)</span>
+<span style="color:#f92672">[</span> 2725.770045<span style="color:#f92672">]</span> sd 33:0:0:2: <span style="color:#f92672">[</span>sdd<span style="color:#f92672">]</span> Write Protect is off
+<span style="color:#f92672">[</span> 2725.770050<span style="color:#f92672">]</span> sd 33:0:0:2: <span style="color:#f92672">[</span>sdd<span style="color:#f92672">]</span> Mode Sense: <span style="color:#ae81ff">03</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span> <span style="color:#ae81ff">00</span>
+<span style="color:#f92672">[</span> 2725.782617<span style="color:#f92672">]</span> sd 33:0:0:2: <span style="color:#f92672">[</span>sdd<span style="color:#f92672">]</span> No Caching mode page found
+<span style="color:#f92672">[</span> 2725.782622<span style="color:#f92672">]</span> sd 33:0:0:2: <span style="color:#f92672">[</span>sdd<span style="color:#f92672">]</span> Assuming drive cache: write through
+<span style="color:#f92672">[</span> 2725.914036<span style="color:#f92672">]</span>  sdd: sdd1
+
+</code></pre></div><p>The flash disk name can be seen in the dmesg output: <em><strong>/dev/sdd</strong></em> 
+We are now ready to flash the image.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /home/user/yocto/poky/build/tmp/deploy/images/raspberrypi0-wifi/
+
+sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of<span style="color:#f92672">=</span>/dev/sdd bs<span style="color:#f92672">=</span><span style="color:#ae81ff">512</span> count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+
+sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>core-image-minimal-raspberrypi0-wifi.rpi-sdimg of<span style="color:#f92672">=</span>/dev/sdd bs<span style="color:#f92672">=</span><span style="color:#ae81ff">8192</span>
+
+sudo sync
+</code></pre></div><h2 id="8-boot">8. Boot</h2>
+<p>Insert the flashed sdcard and startup the raspberrypi.</p>
+
+					</div>
+					<div class="post-comments">
+						
+					</div>
+				</div>
+			</div>
+      <div class="col-md-4">
+        <aside class="sidebar"><div class="widget widget-latest-post">
+    <h4 class="widget-title">Latest Posts</h4>
+    
+    <div class="media">
+      <a class="pull-left" href="http://inspiral.be/blog/blog-post-1/">
+        <img class="media-object" src="/images/blog/blog-post-1.png" alt="Creating an Ubuntu Virtual Machine with VMware Player">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="http://inspiral.be/blog/blog-post-1/">Creating an Ubuntu Virtual Machine with VMware Player</a></h4>
+        <p>Having a virtual machine can be useful for a …</p>
+      </div>
+    </div>
+    
+    <div class="media">
+      <a class="pull-left" href="http://inspiral.be/blog/blog-post-2/">
+        <img class="media-object" src="/images/blog/blog-post-2.png" alt="Raspberry Pi image using the Yocto Project">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="http://inspiral.be/blog/blog-post-2/">Raspberry Pi image using the Yocto Project</a></h4>
+        <p>The Raspberry Pi is low-cost single board …</p>
+      </div>
+    </div>
+    
+  </div><div class="widget widget-category">
+    <h4 class="widget-title">Categories</h4>
+    <ul class="widget-category-list">
+      <li><a href="/categories/embedded-linux">Embedded linux</a></li>
+      <li><a href="/categories/virtualization">Virtualization</a></li>
+    </ul>
+  </div><div class="widget widget-tag">
+    <h4 class="widget-title">Tags</h4>
+    <ul class="widget-tag-list">
+      <li><a href="/tags/raspberry-pi">Raspberry pi</a></li>
+      <li><a href="/tags/ubuntu">Ubuntu</a></li>
+      <li><a href="/tags/vmware">Vmware</a></li>
+      <li><a href="/tags/yocto-project">Yocto project</a></li>
+    </ul>
+  </div></aside>
+
+      </div>
+		</div>
+	</div>
+</section>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footer-manu">
+					<ul>
+                    
+                    <li><a href="http://inspiral.be/about">About</a></li>
+                    
+                    <li><a href="http://inspiral.be/project">Project</a></li>
+                    
+                    <li><a href="http://inspiral.be/service">Service</a></li>
+                    
+                    <li><a href="http://inspiral.be/contact">Contact</a></li>
+                    
+					</ul>
+				</div>
+				<p class="copyright">Copyright © 2021 <a href="http://www.inspiral.be">Inspiral</a> All Rights Reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+<script src="http://inspiral.be/plugins/jQuery/jquery.min.js"></script>
+
+<script src="http://inspiral.be/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="http://inspiral.be/plugins/slick/slick.min.js"></script>
+
+<script src="http://inspiral.be/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="http://inspiral.be/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="http://inspiral.be/plugins/google-map/gmap.js"></script>
+
+
+
+
+<script src="http://inspiral.be/js/script.min.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-167871918-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+
+</html>

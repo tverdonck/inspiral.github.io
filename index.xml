@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>inspiral | Tom Verdonck</title>
+    <link>http://inspiral.be/</link>
+    <description>Recent content on inspiral | Tom Verdonck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2021 [Inspiral](http://www.inspiral.be) All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 08 Aug 2020 09:05:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://inspiral.be/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating an Ubuntu Virtual Machine with VMware Player</title>
+      <link>http://inspiral.be/blog/blog-post-1/</link>
+      <pubDate>Sat, 08 Aug 2020 09:05:00 +0200</pubDate>
+      
+      <guid>http://inspiral.be/blog/blog-post-1/</guid>
+      <description>Having a virtual machine can be useful for a variety of purposes, such as testing unknown software in an isolated environment that is separate from your host operating system. A virtual machine can also help you to run incompatible software that doesn&amp;rsquo;t work with your host operating system, or simply exploring a new operating system altogether.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi image using the Yocto Project</title>
+      <link>http://inspiral.be/blog/blog-post-2/</link>
+      <pubDate>Tue, 04 Aug 2020 09:00:00 +0200</pubDate>
+      
+      <guid>http://inspiral.be/blog/blog-post-2/</guid>
+      <description>The Raspberry Pi is low-cost single board computer(SBC) created by the Raspberry Pi Foundation in 2012. This SBC was initialy created for educational purposes and by the end of 2019 over 30M pieces were sold.</description>
+    </item>
+    
+    <item>
+      <title>CAN2.0 dongle</title>
+      <link>http://inspiral.be/project/project-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inspiral.be/project/project-1/</guid>
+      <description>This dongle can be used in combination with a certain brand of material handling equipment. When connected to the CAN-bus it unlocks menus for diagnostic purposes.
+Features:
+ ARM Cortex-M0 microcontroller CAN2.</description>
+    </item>
+    
+    <item>
+      <title>I/O card</title>
+      <link>http://inspiral.be/project/project-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inspiral.be/project/project-2/</guid>
+      <description>(*) The image has been pixelated per client request.
+This I/O card can be mounted in a standard PC and uses a simple USB2.0 interface for control.
+Multiple cards can be daisy-chained to increase the I/O capabilities of the system.</description>
+    </item>
+    
+    <item>
+      <title>Standalone tester</title>
+      <link>http://inspiral.be/project/project-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inspiral.be/project/project-3/</guid>
+      <description>Standalone tester for programming and testing an IO interface board.
+Programming + full coverage test takes 10 seconds.
+Features:
+ Custom fixture with needle bed. Broadcom BCM2835 processor HDMI diplay USB Atmel ICE programmer USB RS485 serial communication.</description>
+    </item>
+    
+    <item>
+      <title>Tom Verdonck</title>
+      <link>http://inspiral.be/author/tom-verdonck/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://inspiral.be/author/tom-verdonck/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
