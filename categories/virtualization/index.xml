@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtualization on inspiral | Tom Verdonck</title>
-    <link>https://tverdonck.github.io/categories/virtualization/</link>
+    <link>https://inspiral.be/categories/virtualization/</link>
     <description>Recent content in Virtualization on inspiral | Tom Verdonck</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2021 [Inspiral](http://www.inspiral.be) All Rights Reserved</copyright>
     <lastBuildDate>Sat, 08 Aug 2020 09:05:00 +0200</lastBuildDate>
     
-	<atom:link href="https://tverdonck.github.io/categories/virtualization/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://inspiral.be/categories/virtualization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creating an Ubuntu Virtual Machine with VMware Player</title>
-      <link>https://tverdonck.github.io/blog/blog-post-1/</link>
+      <link>https://inspiral.be/blog/blog-post-1/</link>
       <pubDate>Sat, 08 Aug 2020 09:05:00 +0200</pubDate>
       
-      <guid>https://tverdonck.github.io/blog/blog-post-1/</guid>
+      <guid>https://inspiral.be/blog/blog-post-1/</guid>
       <description>Having a virtual machine can be useful for a variety of purposes, such as testing unknown software in an isolated environment that is separate from your host operating system. A virtual machine can also help you to run incompatible software that doesn&amp;rsquo;t work with your host operating system, or simply exploring a new operating system altogether.</description>
     </item>
     
